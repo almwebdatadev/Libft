@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alendine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/03 14:41:57 by alendine          #+#    #+#             */
-/*   Updated: 2025/10/03 15:50:55 by alendine         ###   ########.fr       */
+/*   Created: 2025/10/03 15:29:08 by alendine          #+#    #+#             */
+/*   Updated: 2025/10/03 15:45:47 by alendine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <ctype.h>
 
-int	ft_isalpha(int c)
+int	ft_isdigit(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }
 
 int	main(void)
 {
-	printf("Df propia 'a'--> %d\n", ft_isalpha('a'));
-	printf("Df propia 'b'--> %d\n", ft_isalpha('b'));
-	printf("Df propia '0'--> %d\n", ft_isalpha('0'));
-	printf("Df sis 'a'--> %d\n", isalpha('a'));
-	printf("Df sis 'b'--> %d\n", isalpha('b'));
-	printf("Df sis '0'--> %d\n", isalpha('0'));
+	printf("RoF own 0--> %d\n", ft_isdigit('0'));
+	printf("RoF own 1--> %d\n", ft_isdigit('1'));
+	printf("RoF own a--> %d\n", ft_isdigit('a'));
+	printf("RoF system 0--> %d\n", ft_isdigit('0'));
+	printf("RoF system 1--> %d\n", ft_isdigit('1'));
+	printf("RoF system a--> %d\n", ft_isdigit('a'));
 }
